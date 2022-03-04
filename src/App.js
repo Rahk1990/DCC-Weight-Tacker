@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+
 
 function App() {
+
+  const[entries, setEntries] = useState([{weight: 175, date: '3-4-2022'}, {weight: 123, date: '3-3-2022'}])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <table>
+        <thead>
+          <th>Enter Number</th>
+          <th>Weight</th>
+          <th>Date</th>
+        </thead>
+        <tbody>
+          {entries.map((entry, index) =>{ 
+          return(
+            <tr>
+              <td>{index + 1 }</td>
+              <td>{entry.weight}</td>
+              <td>{entry.date}</td>
+            </tr>
+          )
+          })}
+          <tr>
+
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 }
