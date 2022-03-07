@@ -15,6 +15,7 @@ const AddEntryFrom = (props) => {
             date: date
         };
             console.log(newEnrty)
+            props.addNewEntryProperty(newEnrty)
     }
   
     return ( 
