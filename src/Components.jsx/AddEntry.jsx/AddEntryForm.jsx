@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 
 
-const AddEntryFrom = (props) => {
+const AddEntryForm = (props) => {
 
     const [weight, setWeight] = useState(0);
     const [date, setDate] = useState('');
@@ -15,7 +15,7 @@ const AddEntryFrom = (props) => {
             date: date
         };
             console.log(newEnrty)
-            props.addNewEntryProperty(newEnrty)
+            props.addNewEntryForm(newEnrty)
     }
   
     return ( 
@@ -29,4 +29,4 @@ const AddEntryFrom = (props) => {
     );
 }
  
-export default AddEntryFrom;
+export default AddEntryForm;

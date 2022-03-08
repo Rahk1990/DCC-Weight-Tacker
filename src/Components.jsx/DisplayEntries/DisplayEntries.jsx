@@ -3,9 +3,11 @@ const DisplayEntries = (props) => {
     return ( 
         <table>
         <thead>
+          <tr>
           <th>Enter Number</th>
           <th>Weight</th>
           <th>Date</th>
+          </tr>
         </thead>
         <tbody>
           {props.parentEntries.map((entry, index) => { 
